@@ -1,0 +1,163 @@
+#define _CRT_SECURE_NO_WARNINGS 1
+//不再产生C语言传统库函数报错
+
+#include<stdio.h>
+#include<string.h>
+
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	//10*sinzeof(int) = 40
+//	printf("%d\n", sizeof(arr));
+//	//数组元素个数=数组总大小/元素大小
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	printf("sz = %d\n", sz);
+////	int a = 1;
+////	printf("%d\n", a);
+////	printf("%d\n", !a);//! 操作符
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = 10;
+//	a = 20;//= 赋值  == 判断
+//	a = a + 10;
+//	a += 10;
+//	//复合赋值符
+//	return 0;
+//}
+
+//int main()
+//{
+//	//(二进制）位操作
+//	//& 按位域
+//	//| 按位或
+//	//^ 按位异或
+//	int a = 3;
+//	int b = 5;
+//	int c = a & b;
+//	printf("%d\n", c);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int a = 1;
+//	int b = a << 2;//<<-移位操作符
+//	printf("%d\n", b);
+//	printf("%d\n", a);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };//定义一个数组
+//	int i = 0;
+//	while (i < 10)
+//	{
+//		printf("%d\n", arr[i]);
+//		i++;
+//	}
+//	//printf("%d\n", arr[5]);//下标形式访问数组元素
+//	//char ch[20];
+//	//float arr[20];
+//	return 0;
+//}
+
+//int main()
+//{
+//	int line = 0;
+//	printf("加入比特\n");
+//
+//	while (line <= 20000)
+//	{
+//		printf("敲了%d行代码 \n",line);
+//		line++;
+//	}
+//	printf("好offer\n");
+//
+//	return 0;
+//}
+
+//选择语句
+//int main()
+//{
+//	int input = 0;
+//	printf("学习编程\n");
+//	printf("好好学习吗？（1/0）:> ");
+//	scanf("%d", &input);
+//	if (input == 1)
+//	{
+//		printf("拿到offer，走上人生巅峰\n");
+//	}
+//	else
+//	{
+//		printf("回家养猪\n");
+//	}
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	//printf("%d\n", strlen("c:\test\32\test.c"));//\32--32是两个八进制数字,32-->10进制数26--作为ASCII码值代表的字符
+//	//printf("%c\n", '\132');
+//	//printf("%c\n", '\x61');
+//	//printf("%c\n", '\'');//\\防止识别为转义字符
+//	//printf("%s\n", "\"");
+//	//printf("c:\\test\\32\\testcode");
+//	//char arr1[] = "abd";
+//	//char arr2[] = {'a','b','c'};//添加'\0'
+//	//printf("%d\n", strlen(arr1));//3
+//	//printf("%d\n", strlen(arr2));//随机值
+//	//char arr1[] = "abc";//数组
+//	////"abc"--'a' 'b' 'c' '\0' -- '0'字符串结束标志
+//	//char arr2[] = { 'a','b','c',0};
+//	//printf("%s\n", arr1);
+//	//printf("%s\n", arr2);
+//	return 0;
+//}
+
+//3.#define 定义的标识符常量
+//#define MAX 10
+
+//enum Sex
+//{
+//	Male,
+//	Female,
+//	Secret
+//};
+//Male,Female,Secret-枚举常量
+//int main()
+//{
+	//3;//1.字面常量
+	//const int num = 4;//2.const修饰的常变量
+	//const int n = 10;
+	//int arr[n] = { 0 };
+	//int arr[MAX] = { 0 };
+	//printf("%d\n", MAX);
+	//4.枚举常量，可被一一列举的常量（性别，星期）枚举关键-enum
+	//enum Sex s = Female;
+	//printf("%d\n", Male);//0
+	//printf("%d\n", Female);//1
+	//printf("%d\n", Secret);//2
+//	return 0;
+//}
+
+//int Add(int x, int y)//自定义函数
+//{
+//	int z = x + y;
+//	return z;
+//}
+//
+//int main()
+//{
+//	int num1 = 0;
+//	int num2 = 0;
+//	scanf("%d%d", &num1, &num2);//库函数
+//	//int sum = num1 + num2; 
+//	int sum = Add(num1, num2);
+//	printf("sum=%d\n", sum);
+//	return 0;
+//}
