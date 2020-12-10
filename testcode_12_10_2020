@@ -1,0 +1,280 @@
+#include<stdio.h>
+
+///*井字棋胜负判断程序*/ 
+//
+//int main(){
+//    
+//    //一，定义棋盘
+//    
+//    const int size=3;
+//    int board[size][size];//3*3棋盘 
+//    int i,j; 
+//    int numof0,numof1,numof2,numof3;
+//    int result;
+//    result=-1;//结果-1代表未结束，结果0代表O方胜利，结果1代表X方胜利。
+//    
+//    //二，读入棋盘数据 
+//    
+//    for(i=0;i<size;i++){
+//        for(j=0;j<size;j++){
+//            scanf("%d",&board[i][j]);
+//        }
+//    }
+//    
+//    //三，对读入数据进行检查
+//    
+//    // 1.检查行列 
+//    for(i=0;i<size&&result==-1;i++){
+//        numof0=numof1=numof2=numof3=0;
+//        for(j=0;j<size;j++){
+//            if(board[i][j]==0)
+//            numof0++;
+//            if(board[i][j]==1)
+//            numof1++;
+//            if(board[j][i]==0)
+//            numof2++;
+//            if(board[j][i]==1)
+//            numof3++;
+//            if(numof0==size||numof2==size)
+//            result=0;
+//            if(numof1==size||numof3==size)
+//            result=1;
+//        }
+//    }
+//    
+//    // 2.检查对角 
+//    numof0=numof1=numof2=numof3=0;
+//    for(i=0;i<size&&result==-1;i++){
+//        for(j=0;j<size;j++){ 
+//        if(board[i][i]==0)
+//        numof0++;
+//        if(board[i][i]==1)
+//        numof1++;
+//        if(board[i][size-i-1]==0)
+//        numof2++;
+//        if(board[i][size-i-1]==1)
+//        numof3++;
+//        if(numof0==size||numof2==size)
+//        result=0;
+//        if(numof1==size||numof3==size)
+//        result=1;
+//        } 
+//    }
+//    
+//    //四，显示何方胜利
+//    
+//    if(result==0)
+//    printf("O方胜利！");
+//    if(result==1) 
+//    printf("X方胜利！");
+//    return 0;
+//} 
+
+//int main()
+//{
+//	//三子棋游戏判断胜负（二维数组） 
+//	const int size = 3;
+//	int board[size][size];
+//	int i,j;
+//	int numofX;
+//	int numofO; 
+//	int result = -1; //-1:没人赢，1：赢，0：0赢 
+//	
+//	//读入矩阵
+//	for(i=0;i<size;i++)
+//	{
+//		for (j=0;j<size;j++)
+//		{
+//			scanf("%d",&board[i][j]);
+//		}
+//	} 
+//	 
+//	 //检查行 
+//	 for(i=0;i<size&&result==-1;i++)
+//	 {
+//	 	numofO=numofX=0;
+//	 	for(j=0;j<size;j++)
+//	 	{
+//	 		if (board[i][j]==1)
+//	 		{
+//	 			numofX++;
+//			 }
+//	 		
+//	 		else
+//	 		{
+//	 			numofO++;
+//			 }		
+//		}	 
+//		if(numofO==size)
+//		{
+//			result = 0;
+//		}
+//		else 
+//		{
+//			result = 1;
+//		}	 
+//	 }		
+//	 
+//	 //检查列
+//	  if (result==-1)
+//	  {
+//	  	for(j=0;j<size&&result==-1;j++)
+//	  	{
+//	  		numofO=numofX=0;
+//	  		for(i=0;i<size;i++)
+//	  		{
+//	  			if(board[i][j]==1)
+//	  			{
+//	  				numofX++;
+//				  }
+//				  else
+//				  {
+//				  	numofO++;
+//				  }
+//			  }		   
+//		 if(numofO==size)
+//		  {
+//		  	result=0;
+//		   } 
+//		   else 
+//		   {
+//		   	result=1;
+//		   }	 
+//	     }			
+//
+//	   } 
+//	    
+//    //检查对角线
+//	numofO=numofX=0;
+//	 for(i=0;i<size;i++)
+//	 {
+//	 	
+//	 	if(board[i][i]==1)
+//	 	{
+//	 		numofX++;
+//		 }
+//		 else
+//		 {
+//		 	numofO++;
+//		 }
+//	  }
+//	  if(numofO==size)
+//	  {
+//	  	result=0;
+//	   } 
+//	   else
+//	   {
+//	   	result=1;
+//	   }
+//	   
+//     numofO=numofX=0;
+//     for(i=0;i<size;i++)
+//     {
+//     	
+//     	if(board[i][size-i-1]==1)
+//     	{
+//     		numofX++;
+//		 }
+//		 else
+//		 {
+//		 	numofO++;
+//		 }
+//	 }
+//	 if(numofO==size)
+//	  {
+//	  	result=0;
+//	   } 
+//	   else
+//	   {
+//	   	result=1;
+//	   }
+//	   
+//	   //显示胜利方
+//	   if(result==0)
+//	   {
+//	   	printf("O方胜利");
+//	   }
+//	   if(result==1)
+//	   {
+//	   	printf("X方胜利");
+//	   }
+//	   if(result==-1)
+//	   {
+//	   	printf("无人获胜"); 
+//	   }
+// 
+//	return 0;
+// } 
+
+//void swap(int a, int b);
+//
+//int main()
+//{
+//	//局部变量生命周期及作用域 
+//	int a=5;
+//	int b=6;
+//	swap(a,b);
+//	printf("%d-%d",a,b);
+//	return 0;
+//}
+//
+//void swap(int a, int b)
+//{
+//	int t=0;
+//	a=t;
+//	a=b;
+//	b=t;
+//}
+
+//void cheer ( int i)
+//{
+//	printf("cheer %d\n",i);
+//}
+//
+//int main()
+//{
+//	double f = 2.4; 
+//	cheer (f);//发生了double->int的类型转换 
+//	return 0;
+//}
+
+//void sum(int begin, int end);//函数原型声明 
+//
+//int main()
+//{
+//	sum(1,10);//调用函数 
+//	sum(20,35);
+//	sum(1,100);
+//	return 0;
+//	return 0;
+// } 
+// 
+//void sum(int begin, int end)//定义函数 
+//{
+//	int i=0;
+//	int sum=0;
+//	for(i=0;i<=end;i++)
+//	{
+//		sum+=i;
+//	}
+//	printf("%d到%d的和为%d\n",begin,end,sum);
+//}
+
+//void sum(int begin, int end)//定义函数 
+//{
+//	int i=0;
+//	int sum=0;
+//	for(i=0;i<=end;i++)
+//	{
+//		sum+=i;
+//	}
+//	printf("%d到%d的和为%d\n",begin,end,sum);
+//}
+//
+//int main()
+//{
+//	sum(1,10);//调用函数 
+//	sum(20,35);
+//	sum(1,100);
+//	return 0;
+//}
