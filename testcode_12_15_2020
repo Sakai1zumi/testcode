@@ -1,0 +1,42 @@
+#include<stdio.h>
+#include<string.h>
+
+//int main()
+//{
+//	char s1[] = "abc";
+//	char s2[] = "Abc";
+//	printf("%d\n", strcmp(s1, s2));
+//	return 0;
+//}
+
+//int mylen(const char *s)
+//{
+//
+//	int idx = 0;
+//	while (s[idx] != '\0')
+//	{
+//		idx++;
+//
+//	}
+//	return idx;
+//}
+//
+//int main()
+//{
+//	char line[] = "Hello";
+//	//printf("strlen=%lu\n", strlen(line));//5
+//	printf("mylen=%lu\n", mylen(line));
+//	printf("sizeof=%lu\n",sizeof(line));//6
+//	return 0;
+//}
+
+//int main()
+//{
+//	//a[0]-->char*
+//	char *a[] = {
+//		"hello",
+//		"world",
+//		"sjkhkjhgjkdhgkjdhfdkjeuefj"
+//	};
+//	return 0;
+//}
