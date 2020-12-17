@@ -1,0 +1,169 @@
+#include<stdio.h>
+#include<stdbool.h>
+
+
+
+//struct point {
+//	int x;
+//	int y;
+//};
+//
+//struct point getStruct(void);
+//void output(struct point);//结构作为函数参数
+//
+//int main()
+//{
+//	struct point y = { 0,0 };
+//	y = getStruct();
+//	output(y);
+//	return 0;
+//}
+//
+//struct point getStruct(void)
+//{
+//	struct point p;
+//	scanf("%d", &p.x);
+//	scanf("%d", &p.y);
+//	return p;
+//}
+//
+//void output(struct point p)
+//{
+//	printf("(%d,%d)\n", p.x, p.y);
+//}
+
+//struct date {
+//	int month;
+//	int day;
+//	int year;
+//};
+//
+//bool isLeap(struct date d);
+//int numberOfDays(struct date d);
+//
+//int main()
+//{
+//	//根据今天的日期计算明天的日期
+//	struct date today, tomorrow;
+//
+//	printf("Enter today's date(mm dd yyyy):");
+//	scanf("%i %i %i", &today.month, &today.day, &today.year);
+//	if (today.day != numberOfDays(today))//判断是不是月份最后一天
+//	{
+//		tomorrow.day = today.day + 1;
+//		tomorrow.month = today.month;
+//		tomorrow.year = today.year;
+//	}
+//	else if (today.month == 12)//判断是不是12月
+//	{
+//		tomorrow.day = 1;
+//		tomorrow.month = 1;
+//		tomorrow.year = today.year + 1;
+//	}
+//	else
+//	{
+//		tomorrow.day = 1;
+//		tomorrow.month = today.month + 1;
+//		tomorrow.year = today.year;
+//	}
+//	printf("Tomorrow's date is %i-%i-%i.\n",
+//		tomorrow.month, tomorrow.day, tomorrow.year);
+//	return 0;
+//}
+//
+//int numberOfDays(struct date d)
+//{
+//	int days;
+//	const int dayPerMonth[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+//	if (d.month == 2 && isLeap(d))
+//	{
+//		days = 29;
+//	}
+//	else
+//	{
+//		days = dayPerMonth[d.month - 1];
+//	}
+//	return days;
+//}
+//
+//bool isLeap(struct date d)
+//{
+//	//判断闰年
+//	bool Leap = false;
+//	if ((d.year % 4 == 0 && d.year % 100 != 0) || d.year % 400 == 0)
+//	{
+//		Leap = true;
+//	}
+//	return Leap;
+//}
+
+//struct date {
+//	int month;
+//	int day;
+//	int year;
+//};//通常在函数外部声明结构类型，这样可以被多个函数使用
+
+//int main()
+//{
+//	struct date today;
+//	today = (struct date) { 12, 17, 2020 };
+//	struct date *pDate = &today;
+//	struct date day;
+//	day = today;//可以做赋值、取地址，也可以传递给函数参数
+//	day.year = 2019;
+//	printf("Today's date is %i-%i-%i.\n",
+//		today.year, today.month, today.day);
+//	printf("The day's date is %i-%i-%i.\n",
+//		day.year, day.month, day.day);
+//	printf("The adress of today is %p\n.", pDate);
+//	return 0;
+//}
+
+//int main()
+//{
+//	struct date today;
+//	today.day = 17;
+//	today.month = 12;
+//	today.year = 2020;
+//	printf("Today's date is %i-%i-%i.\n", today.year, today.month, today.day);
+//	return 0;
+//}
+
+//enum COLOR{RED,YELLOW,GREEN,NumCOLORS};
+//
+//int main()
+//{
+//	int color = -1;
+//	char *ColorNames[NumCOLORS] = { "red","yellow","green" };
+//	char *colorName = NULL;
+//	printf("请输入你喜欢的颜色的代码：");
+//	scanf("%d", &color);
+//	if (color >= 0 && color < NumCOLORS)
+//	{
+//		colorName = ColorNames[color];
+//	}
+//	else
+//	{
+//		colorName = "unknown";
+//	}
+//	printf("你喜欢的颜色是%s\n", colorName);
+//	return 0;
+//}
+
+//enum color {red, yellow, green};
+//
+//void f(enum color c);
+//
+//int main()
+//{
+//	enum color t = red;
+//	scanf("%d", &t);
+//	f(t);
+//
+//	return 0;
+//}
+//
+//void f(enum color c)
+//{
+//	printf("%d\n", c);
+//}
